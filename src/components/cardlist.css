@@ -1,0 +1,5 @@
+.column {
+    display: flex;
+    width: 10em;
+    flex-direction: column;
+  }
