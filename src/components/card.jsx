@@ -2,17 +2,13 @@
 import React from "react";
 import "./card.css";
 
-const isOperator = val => {
-  return !isNaN(val) || val === "." || val === "=";
-};
-
 export const Card = props => (
-  <div
-    className={`card-wrapper ${
-      isOperator(props.children) ? null : "operator"
-    }`}
-    onClick={() => props.handleClick(props.children)}
-  >
-    {props.children}
+  <div className='card-wrapper'>
+    <p className='a'>
+    {`${props.info.name}
+        ${props.info.up} 
+${props.info.left}             ${props.info.right}
+        ${props.info.down}`}
+    </p>
   </div>
 );
